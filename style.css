@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-background : hsl(230, 17%, 14%);
+    --dark-card-background : hsl(228, 28%, 20%);
+    --dark-card-background-hover : hsl(231, 16%, 23%);
+    --dark-text : hsl(228, 34%, 66%);
+    --dark-secondary-text : white;
+    --green : hsl(163, 72%, 41%);
+    --red : hsl(356, 69%, 56%);
+    --facebook : hsl(208, 92%, 53%);
+    --twitter : hsl(203, 89%, 53%);
+    --instagram : linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --youtube : hsl(348, 97%, 39%);
+}
+
+/* BODY */ 
+
+body {
+    background-color: var(--dark-background);
+}
+
+.container {
+    width : 80vw;
+    margin-right : auto;
+    margin-left : auto;
+}
+
+/* TYPO */
+h1
+{
+    color : var(--dark-secondary-text);
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    color : var(--dark-secondary-text);
+    font-family: 'Inter', sans-serif;
+    margin-top : 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    color : var(--dark-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.name {
+    color : var(--dark-text);
+    font-size : 12px;
+    margin-top : 50px;
+    margin-bottom : 50px;
+    margin-left : 10px;
+}
+
+.communityNumber {
+    color : var(--dark-secondary-text);
+    font-size : 50px;
+    font-weight: 700;
+}
+
+.community {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom : 50px;
+}
+
+.stat,
+.stat-red {
+    font-size: 12px;
+    position: relative;
+}
+
+.stat {
+    color : var(--green);
+}
+
+.stat::after,
+.stat-red::after {
+    content : '';
+    position : absolute;
+    top : 5px;
+    left : -13px;
+    width : 8px;
+    height : 4px;
+}
+
+.stat::after {
+    background-image: url('images/icon-up.svg');
+}
+
+.stat-red::after {
+    background-image: url('images/icon-down.svg');
+}
+
+.stat-red {
+    color : var(--red);
+}
+
+.secondaryStat {
+    font-size : 40px;
+    color : var(--dark-secondary-text);
+}
+
+
+/*********** PAGE HEADER ******************/
+
+.page-header .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*************** Main section ****************/ 
+.mainstat .container {
+    display : grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.mainMedia {
+    min-height : 280px;
+    background-color: var(--dark-card-background);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position : relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainMedia:hover,
+.mainMedia:focus {
+    background-color: var(--dark-card-background-hover);
+}
+
+.mainMedia-youtube::before,
+.mainMedia-twitter::before,
+.mainMedia-facebook::before,
+.mainMedia-instagram::before {
+    content : '';
+    width : 100%;
+    height : 100%;
+    position: absolute;
+    border-radius: 10px;
+    z-index : -1;
+    top : -5px;
+}
+
+.mainMedia-youtube::before {
+    background-color: var(--youtube);
+}
+
+.mainMedia-facebook::before {
+    background-color: var(--facebook);
+}
+
+.mainMedia-instagram::before {
+    background: rgb(247,212,49);
+    background: linear-gradient(93deg, rgba(247,212,49,1) 0%, rgba(251,28,141,1) 100%);
+}
+
+.mainMedia-twitter::before {
+    background-color: var(--twitter);
+}
+
+.user-media {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********** Overview today ****************/
+.overview main {
+    display : grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap : 50px;
+    row-gap: 30px;
+}
+
+.todayStat {
+    height : 150px;
+    background-color: var(--dark-card-background);
+    padding : 30px;
+    border-radius: 10px;
+}
+
+.todayStat:hover,
+.todayStat:focus {
+    background-color: var(--dark-card-background-hover);
+}
+
+
+.stat-title,
+.stat-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-number {
+    margin-top : 30px;
+    align-items: baseline;
+}
+
+.attribution {
+    margin-top : 50px;
+    color : var(--dark-text);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* SWITCH DARK MODE INPUT */
+
+.darkmode {
+    display: flex;
+    align-items: center;
+}
+
+.dark-label {
+    color : var(--dark-secondary-text);
+    margin-right : 10px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 22px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightgray;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 1px;
+    background-color: var(--dark-card-background);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: linear-gradient(93deg, rgb(18, 177, 240) 0%, rgb(6, 253, 191) 100%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* MEDIA QUERIES */
+
+@media screen and (max-width : 1450px){
+    .overview main,
+    .mainstat .container {
+        gap : 25px;
+    }
+
+    .container {
+        width : 90vw;
+    }
+}
+
+@media screen and (max-width : 1150px) {
+    .overview main,
+    .mainstat .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .overview main,
+    .mainstat .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

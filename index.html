@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Ludivine Sagnol</title>
+
+</head>
+<body>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="title">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+      <div class="darkmode">
+        <p class="dark-label">Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" class="checkbox-dark-mode"checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="mainstat">
+    <div class="container">
+      <article class="mainMedia mainMedia-facebook">
+        <header class="user-media">
+          <img src="images/icon-facebook.svg" alt="facebook logo">
+          <p class="name">@nathanf</p>
+        </header>
+        <p class="communityNumber">1987</p>
+        <p class="community">Followers</p>
+        <p class="stat">12 Today</p>
+      </article>
+
+      <article class="mainMedia mainMedia-twitter">
+        <header class="user-media">
+          <img src="images/icon-twitter.svg" alt="twitter logo">
+          <p class="name">@nathanf</p>
+        </header>        
+        <p class="communityNumber">1044</p>
+        <p class="community">Followers</p>
+        <p class="stat">99 Today</p>
+      </article>
+
+      <article class="mainMedia mainMedia-instagram">
+        <header class="user-media">
+          <img src="images/icon-instagram.svg" alt="instagram logo">
+          <p class="name">@realnathanf</p>
+        </header>
+        <p class="communityNumber">11k</p>
+        <p class="community">Followers</p>
+        <p class="stat">1099 Today</p>
+      </article>
+
+      <article class="mainMedia mainMedia-youtube">
+        <header class="user-media">
+          <img src="images/icon-youtube.svg" alt="youtube logo">
+          <p class="name">Nathan F.</p>
+        </header>
+        <p class="communityNumber">8239</p>
+        <p class="community"> Subscribers</p>
+        <p class="stat-red">144 Today</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="overview">
+    <div class="container">
+      <header class="overviewTitle">
+        <h2>Overview - Today</h2>
+      </header>
+
+        <main>
+          <article class="todayStat">
+            <div class="stat-title">
+              <p>Page Views</p>
+              <img src="images/icon-facebook.svg" alt="facebook logo">
+            </div>
+            <div class="stat-number">
+              <p class="secondaryStat">87</p>
+              <p class="stat">3%</p>
+            </div>
+          </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Likes</p>
+            <img src="images/icon-facebook.svg" alt="facebook logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">52</p>
+            <p class="stat-red">2%</p>
+          </div>
+        </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Likes</p>
+            <img src="images/icon-instagram.svg" alt="instagram logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">5462</p>
+            <p class="stat">2257%</p>
+          </div>
+        </article>
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Profile Views</p>
+            <img src="images/icon-instagram.svg" alt="instagram logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">52k</p>
+            <p class="stat">1375%</p>
+          </div>
+        </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Retweets</p>
+            <img src="images/icon-twitter.svg" alt="twitter logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">117</p>
+            <p class="stat">303%</p>
+          </div>
+        </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Likes</p>
+            <img src="images/icon-twitter.svg" alt="twitter logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">507</p>
+            <p class="stat">553%</p>
+          </div>
+        </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Likes</p>
+            <img src="images/icon-youtube.svg" alt="youtube logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">107</p>
+            <p class="stat-red">19%</p>
+          </div>
+        </article>  
+
+        <article class="todayStat">
+          <div class="stat-title">
+            <p>Total Views</p>
+            <img src="images/icon-youtube.svg" alt="youtube logo">
+          </div>
+          <div class="stat-number">
+            <p class="secondaryStat">1407</p>
+            <p class="stat-red">12%</p>
+          </div>
+        </article>
+      </main>  
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by Ludivine Sagnol.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
